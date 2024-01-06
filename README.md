@@ -30,3 +30,25 @@ The `category_score` and `mechanic_score` are used as features in our machine le
 
 The approach of scoring categories and mechanics not only aids in the model's predictive accuracy but also in interpretability. Analysts can understand the impact of a game's thematic elements and gameplay mechanisms on its overall rating, offering valuable insights into consumer preferences and market trends.
 
+## Data Preparation
+
+### Feature Matrix and Target Vector
+
+The data is prepared for machine learning by creating a feature matrix `X` and a target vector `y`. The feature matrix includes all relevant numerical features that are expected to influence the board game ratings, which are our target variable. We exclude non-predictive columns such as 'names' from the feature set. The target vector `y` comprises the board game ratings that we aim to predict.
+
+### Training and Testing Sets
+
+We split our dataset into training and testing sets, with 80% of the data used for training our model and the remaining 20% for testing its predictive power. This split helps in validating the performance of our machine learning model on unseen data, ensuring its effectiveness and generalization capability.
+
+## Model Training and Evaluation
+
+### Linear Regression Model
+
+A Linear Regression model is chosen for its simplicity and interpretability. It is trained on the training set to understand the relationships between the features and the target variable.
+
+### Performance Metrics
+
+After training, we predict the ratings on the test set and evaluate the model's performance using the Mean Squared Error (MSE) metric. MSE provides us with a single aggregate figure representing the average of the squares of the errors between the predicted and actual ratings, giving us a sense of the model's accuracy.
+
+
+
