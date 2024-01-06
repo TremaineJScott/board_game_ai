@@ -17,9 +17,10 @@ def predict_new_game(model, scaler, category_ratings, mechanic_ratings, feature_
     # Get new game data from user input
     print("\nEnter details for the new game:")
     name = input("Game Name: ")
+    weight = float(input("Weight: "))
     category = input("Categories (comma-separated): ")
     mechanic = input("Mechanics (comma-separated): ")
-    weight = float(input("Weight: "))
+    
 
     # Calculate scores using the provided functions
     category_score = get_average_category_rating(category, category_ratings)
